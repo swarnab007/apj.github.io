@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Game</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mainmariobg {
+            width: 100%;
+            height: 100vh;
+            background-image: url('background.WEBP');
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .mario img {
+            position: absolute;
+            bottom: 55px;
+            animation-name: mariorun;
+            animation-duration: 6s;
+            animation-iteration-count: 5;
+            animation-timing-function: linear;
+        }
+
+        @keyframes mariorun {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: 88%;
+            }
+        }
+
+        h2 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-family: 'Bangers', cursive;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            animation: mariotext 4s linear 1s 5;
+        }
+
+        @keyframes mariotext {
+            0% {
+                font-size: 2em;
+            }
+
+            100% {
+                font-size: 4em;
+                left: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainmariobg">
+        <div class="mario">
+            <img src="./mario.gif" alt="mario running" width="150px">
+            <h2>Mario Run Run</h2>
+        </div>
+    </div>
+    <audio id="my-audio" controls autoplay loop>
+        <source src="audio.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+</html>
